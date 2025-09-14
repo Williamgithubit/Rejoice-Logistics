@@ -10,6 +10,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,13 +128,43 @@ export function Navbar() {
                 >
                   About
                 </Link>
-                <Link 
-                  href="/services" 
-                  className="block text-gray-700 hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Services
-                </Link>
+                
+                {/* Mobile Services Dropdown */}
+                <div>
+                  <button 
+                    className="flex items-center justify-between w-full text-gray-700 hover:text-primary"
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  >
+                    Services 
+                    <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        className="mt-2 ml-4 space-y-2"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {services.map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            className="block text-sm text-gray-600 hover:text-primary py-1"
+                            onClick={() => {
+                              setIsOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                
                 <Link 
                   href="/contact" 
                   className="block text-gray-700 hover:text-primary"

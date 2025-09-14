@@ -33,7 +33,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <div className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-primary/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               Trusted Logistics Partner
             </div>
             
@@ -73,7 +73,7 @@ export default function Hero() {
           >
             <div className="relative">
               <Image
-                src="https://images.pexels.com/photos/4481330/pexels-photo-4481330.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://www.tka.rs/wp-content/uploads/2024/08/Avio-kombinovan-TKA-.jpg"
                 alt="Logistics Operations"
                 width={600}
                 height={500}
