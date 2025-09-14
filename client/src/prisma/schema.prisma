@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Quote {
+  id            String   @id @default(cuid())
+  name          String
+  email         String
+  phone         String?
+  shipmentType  String
+  origin        String
+  destination   String
+  weight        String
+  dimensions    String?
+  description   String?
+  urgency       String   @default("standard")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
