@@ -110,7 +110,7 @@ export function ContactForm() {
               id="phone"
               {...register('phone')}
               className="mt-1"
-              placeholder="+234 123 456 7890"
+              placeholder="+231 123 456 7890"
             />
           </div>
         </div>

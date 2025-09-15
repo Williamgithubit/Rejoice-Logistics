@@ -10,14 +10,14 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Our Location',
-      details: ['123 Business District', 'Victoria Island, Lagos', 'Nigeria'],
+      details: ['Font Street', 'Monrovia', 'Liberia'],
       color: 'text-primary'
     },
     {
       icon: Phone,
       title: 'Phone Numbers',
-      details: ['+234 123 456 7890', '+234 987 654 3210', 'Toll-free: 0800-REJOICE'],
-      color: 'text-green-500'
+      details: ['+231 777 55 0506', '+231 886 550 506', 'Toll-free: 0800-REJOICE'],
+      color: 'text-primary'
     },
     {
       icon: Mail,
@@ -29,7 +29,7 @@ export default function ContactPage() {
       icon: Clock,
       title: 'Business Hours',
       details: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 4:00 PM', '24/7 Emergency Support'],
-      color: 'text-purple-500'
+      color: 'text-primary'
     }
   ];
 
@@ -137,11 +137,11 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="flex items-center justify-center space-x-3">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span className="text-gray-700">123 Business District, Victoria Island</span>
+                  <span className="text-gray-700">Front Street, Monrovia, Liberia</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span className="text-gray-700">+234 123 456 7890</span>
+                  <span className="text-gray-700">+231 777 550 506</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
@@ -163,7 +163,7 @@ export default function ContactPage() {
               <strong>Parking:</strong> Complimentary parking available for visitors
             </p>
             <p className="text-gray-600">
-              <strong>Public Transport:</strong> 5-minute walk from Victoria Island Bus Stop
+              <strong>Public Transport:</strong> 5-minute walk from Broad Street
             </p>
           </motion.div>
         </div>

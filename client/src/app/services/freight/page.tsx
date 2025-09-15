@@ -244,7 +244,7 @@ export default function FreightForwardingPage() {
                 asChild 
                 variant="outline" 
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-white text-primary hover:bg-green-50"
               >
                 <Link href="/contact">Contact Expert</Link>
               </Button>

@@ -18,7 +18,7 @@ const stats = [
     label: 'Shipments Delivered',
     description: 'Successful deliveries completed',
     icon: Package,
-    color: 'text-green-600'
+    color: 'text-primary'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const stats = [
     label: 'Countries Served',
     description: 'Global network coverage',
     icon: Globe,
-    color: 'text-purple-600'
+    color: 'text-primary'
   },
   {
     id: 4,

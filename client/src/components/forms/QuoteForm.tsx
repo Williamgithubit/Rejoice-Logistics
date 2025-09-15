@@ -147,7 +147,7 @@ export function QuoteForm() {
               id="phone"
               {...register('phone')}
               className="mt-1"
-              placeholder="+234 123 456 7890"
+              placeholder="+231 123 456 7890"
             />
             {errors.phone && (
               <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
